@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFWxSS - Rise Force Weath X Star Studios</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Background and colors */
+        body {
+            background: linear-gradient(135deg, #111, #222);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10%;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 1.5em;
+            color: #ff5e57;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff5e57;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('bg.jpg') no-repeat center center/cover; /* Adjusted for relative path */
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: #ff5e57;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #f0f0f0;
+            max-width: 600px;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .hero .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #ff5e57;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .hero .cta-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 10%;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            color: #ff5e57;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            color: #d9d9d9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6em;
+        }
+
+        /* Social Links Section */
+        .social-links {
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: #ff5e57;
+            font-size: 1.8em;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #111;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>RFWxSS</h1>
+        <ul>
+            <li><a href="about.html">About Us</a></li> <!-- Updated link -->
+            <li><a href="social.html">Social Links</a></li> <!-- Updated link -->
+            <li><a href="Rock-Paper-Scissors.html">Rock Paper Scissors</a></li> <!-- Updated link -->
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Rise Force Weath X Star Studios</h1>
+        <p>Welcome to the official site of RFWxSS. We're dedicated to creating, inspiring, and leading with style and passion.</p>
+        <button class="cta-button" onclick="window.location.href='join-club.html'">Join the Club</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Rise Force Weath X Star Studios (RFWxSS) is a vibrant, dynamic club that focuses on bringing creativity to life.
+           From projects and collaborations to events and more, RFWxSS stands as a beacon of innovation and style. Join us as we continue to make our mark on the world!</p>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="social-links">
+        <h2>Follow Us</h2>
+        <a href="https://www.youtube.com/channel/UC2fSTmMRqbyyrAP793FQdeg/community?pvf=CAI%253D" target="_blank">Youtube</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 RFWxSS. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

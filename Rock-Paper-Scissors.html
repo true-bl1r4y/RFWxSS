@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcomeMessage">Welcome to the Rock Paper Scissors Game!</h1>
+        
+        <label for="languageSelect">Choose Language:</label>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+        </select>
+
+        <p id="credits"></p>
+        <a id="creditsLink" href="https://www.traff.co/85l96AoY" target="_blank"></a>
+
+        <label id="entryLabel" for="choiceInput">Enter your choice (Rock, Paper, Scissors):</label>
+        <input type="text" id="choiceInput">
+
+        <button class="button" onclick="playGame()">Play</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let lang = 'en';
+
+        document.getElementById("languageSelect").addEventListener("change", function () {
+            lang = this.value;
+            updateLanguage();
+        });
+
+        function updateLanguage() {
+            if (lang === 'tr') {
+                document.getElementById("welcomeMessage").innerText = "Taş Kağıt Makas Oyununa Hoşgeldiniz!";
+                document.getElementById("credits").innerText = "COPYRIGHT © 2024 MAVI KAYAN(TRUE-BL1R4Y). TÜM HAKLARI SAKLIDIR.";
+                document.getElementById("creditsLink").innerText = "COPYRIGHT İçin Tıklayın";
+                document.getElementById("entryLabel").innerText = "Seçiminizi girin (Taş, Kağıt, Makas):";
+            } else {
+                document.getElementById("welcomeMessage").innerText = "Welcome to the Rock Paper Scissors Game!";
+                document.getElementById("credits").innerText = "COPYRIGHT © 2024 MAVI KAYAN(TRUE-BL1R4Y). ALL RIGHTS RESERVED.";
+                document.getElementById("creditsLink").innerText = "Click Here For The Copyright";
+                document.getElementById("entryLabel").innerText = "Enter your choice (Rock, Paper, Scissors):";
+            }
+        }
+
+        function playGame() {
+            const userChoice = document.getElementById("choiceInput").value.toLowerCase();
+            const choices = lang === 'tr' ? ["taş", "kağıt", "makas"] : ["rock", "paper", "scissors"];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let resultText;
+
+            if (!choices.includes(userChoice)) {
+                resultText = lang === 'tr' ? "Geçersiz seçim!" : "Invalid choice!";
+            } else if (userChoice === computerChoice) {
+                resultText = lang === 'tr' ? "Berabere!" : "It's a tie!";
+            } else if (
+                (userChoice === 'taş' && computerChoice === 'makas') || 
+                (userChoice === 'kağıt' && computerChoice === 'taş') || 
+                (userChoice === 'makas' && computerChoice === 'kağıt') || 
+                (userChoice === 'rock' && computerChoice === 'scissors') || 
+                (userChoice === 'scissors' && computerChoice === 'paper') || 
+                (userChoice === 'paper' && computerChoice === 'rock')
+            ) { 
+                resultText = lang === 'tr' ? "Kazandınız!" : "You win!";
+            } else {
+                resultText = lang === 'tr' ? "Kaybettiniz!" : "You lose!";
+            }
+
+            document.getElementById("result").innerText = `${lang === 'tr' ? 'Sizin seçiminiz' : 'Your choice'}: ${userChoice}\n${lang === 'tr' ? 'Bilgisayarın seçimi' : "Computer's choice"}: ${computerChoice}\n${resultText}`;
+        }
+    </script>
+</body>
+</html>

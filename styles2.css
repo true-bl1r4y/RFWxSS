@@ -1,0 +1,76 @@
+/* styles2.css - Pink-Black Theme for Game */
+
+/* Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Container */
+body {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    color: #ff5e57;
+    margin-bottom: 20px;
+}
+
+/* Labels and Inputs */
+label, select, p, #result {
+    color: #ff5e57;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#choiceInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ff5e57;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Button */
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff5e57;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff7865;
+}
+
+/* Copyright */
+a {
+    color: #ff5e57;
+    font-size: 0.9em;
+}
